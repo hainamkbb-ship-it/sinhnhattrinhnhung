@@ -85,15 +85,7 @@ opacity:0;
 </audio>
 
 <script>
-    <script>
-
-document.addEventListener("click", function(){
-let music = document.getElementById("music")
-music.play()
-})
-
-</script>
-
+ 
 /* tạo bầu trời sao */
 
 for(let i=0;i<150;i++){
@@ -126,6 +118,10 @@ heart.style.fontSize=(Math.random()*20+10)+"px"
 heart.style.animationDuration=(Math.random()*3+2)+"s"
 
 document.body.appendChild(heart)
+    document.addEventListener("click", function(){
+let music = document.getElementById("music")
+music.play()
+})
 
 setTimeout(()=>{heart.remove()},5000)
 
