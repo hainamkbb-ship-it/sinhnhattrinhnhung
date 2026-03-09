@@ -69,7 +69,7 @@ opacity:0;
 <body>
 
 <h1>🎂 Happy Birthday My Love 🎂</h1>
-    <audio autoplay loop>
+  <audio id="music" loop>
 <source src="Photograph.mp3" type="audio/mpeg">
 </audio>
 <p>Chúc em sinh nhật thật hạnh phúc. Anh luôn ở đây, bên em, yêu em nha babi ❤️</p>
@@ -85,6 +85,14 @@ opacity:0;
 </audio>
 
 <script>
+    <script>
+
+document.addEventListener("click", function(){
+let music = document.getElementById("music")
+music.play()
+})
+
+</script>
 
 /* tạo bầu trời sao */
 
