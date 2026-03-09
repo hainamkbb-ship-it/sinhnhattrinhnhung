@@ -1,54 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
 <meta charset="UTF-8">
 <title>Happy Birthday ❤️</title>
 
 <style>
-
 body{
-background:black;
-color:white;
-font-family:Arial;
-text-align:center;
-overflow:hidden;
+    margin:0;
+    font-family:Arial;
+    color:white;
+    text-align:center;
+    background:black;
+    overflow:hidden;
 }
 
 h1{
-margin-top:50px;
-font-size:50px;
-}
-
-p{
-font-size:22px;
+    margin-top:50px;
+    font-size:40px;
 }
 
 .gallery{
-margin-top:40px;
+    margin-top:40px;
 }
 
 .gallery img{
-width:250px;
-border-radius:15px;
-margin:15px;
-box-shadow:0 0 20px pink;
-transition:0.4s;
+    width:220px;
+    margin:10px;
+    border-radius:15px;
+    box-shadow:0 0 15px pink;
 }
 
-.gallery img:hover{
-transform:scale(1.1);
+/* sao */
+.star{
+    position:absolute;
+    width:2px;
+    height:2px;
+    background:white;
+    animation:twinkle 2s infinite;
 }
 
-.heart{
-position:fixed;
-color:red;
-font-size:20px;
-animation:fall 5s linear infinite;
-}
-
-@keyframes fall{
-0%{transform:translateY(-100px)}
-100%{transform:translateY(100vh)}
+@keyframes twinkle{
+0%{opacity:0}
+50%{opacity:1}
+100%{opacity:0}
 }
 
 </style>
@@ -56,35 +50,38 @@ animation:fall 5s linear infinite;
 
 <body>
 
-<h1>Happy Birthday ❤️</h1>
-
-<p>
-Chúc mừng sinh nhật em.  
-Cảm ơn em vì đã xuất hiện trong cuộc đời anh.
-</p>
+<h1>🎂 Happy Birthday My Love 🎂</h1>
+<p>Chúc em sinh nhật thật hạnh phúc. Anh luôn ở đây, bên em ❤️</p>
 
 <div class="gallery">
-
 <img src="anh1.jpg">
 <img src="anh2.jpg">
 <img src="anh3.jpg">
-
 </div>
+
+<audio autoplay loop>
+<source src="music.mp3" type="audio/mpeg">
+</audio>
 
 <script>
 
-function createHeart(){
-const heart=document.createElement("div");
-heart.className="heart";
-heart.innerHTML="❤";
-heart.style.left=Math.random()*100+"vw";
-heart.style.animationDuration=Math.random()*3+3+"s";
-document.body.appendChild(heart);
+/* tạo bầu trời sao */
 
-setTimeout(()=>{heart.remove()},5000);
+for(let i=0;i<150;i++){
+
+let star=document.createElement("div")
+
+star.className="star"
+
+star.style.left=Math.random()*window.innerWidth+"px"
+
+star.style.top=Math.random()*window.innerHeight+"px"
+
+star.style.animationDelay=Math.random()*3+"s"
+
+document.body.appendChild(star)
+
 }
-
-setInterval(createHeart,300);
 
 </script>
 
